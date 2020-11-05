@@ -1,4 +1,6 @@
-# spi reset
+# spi reset issues
+
+Problem is that the async reset (from spi chip select) isn't always working to reset mosi_cnt[12:0] to 0.
 
 from [spi_perihperal](spi_peripheral.v)
 
@@ -11,7 +13,7 @@ from [spi_perihperal](spi_peripheral.v)
     always @(posedge spi_clk or posedge spi_reset)
         if (spi_reset)
         begin
-            mosi_cnt <= 'b0;
+            mosi_cnt <= 'b0;    // <- this doesn't always happen
             mosi_shift <= 'b0;
             eoa <= 'b0;
             re <= 'b0;
@@ -32,7 +34,8 @@ Run make gtkwave to show the vcd. vcd is generated with cocotb and an external p
 
 # In the hardware scope
 
-Design is built with [makefile](Makefile), targets ecp5 12k. A python program uses spidev to make a transfer.
+Design is built with [makefile](Makefile), targets ecp5 12k, top is [top.v](top.v).
+A python program uses spidev to make a transfer.
 
 yellow is clock, cyan is cs, purple is data
 
