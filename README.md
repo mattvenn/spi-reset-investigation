@@ -1,5 +1,7 @@
 # spi reset
 
+from [spi_perihperal](spi_peripheral.v)
+
     assign spi_reset = reset | spi_cs;  // combined reset
 
     ...
@@ -29,6 +31,8 @@
 Run make gtkwave to show the vcd. vcd is generated with cocotb and an external python module not included here.
 
 # In the hardware scope
+
+Design is built with [makefile](Makefile), targets ecp5 12k. A python program uses spidev to make a transfer.
 
 yellow is clock, cyan is cs, purple is data
 
