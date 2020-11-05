@@ -36,6 +36,9 @@ lint:
 %.bit: %_out.config
 	ecppack --svf-rowsize 100000 --compress --svf $(PROJ).svf --input $< --bit $@
 
+gtkwave:
+	gtkwave spi_peripheral.vcd spi_coco.gtkw
+
 ecp-prog: $(PROJ).bit
 	scp $(PROJ).bit $(PI_ADDR):~/
 	ssh $(PI_ADDR) "~/prog_ecp5_fpga.sh $(PROJ).bit"

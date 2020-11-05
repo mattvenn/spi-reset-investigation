@@ -1,0 +1,35 @@
+[*]
+[*] GTKWave Analyzer v3.3.108 (w)1999-2020 BSI
+[*] Thu Nov  5 11:27:00 2020
+[*]
+[dumpfile] "/home/matt/work/fpga/spi-reset-investigation/spi_peripheral.vcd"
+[dumpfile_mtime] "Thu Nov  5 11:18:01 2020"
+[dumpfile_size] 56290
+[savefile] "/home/matt/work/fpga/spi-reset-investigation/spi_coco.gtkw"
+[timestart] 0
+[size] 2289 717
+[pos] -1 -1
+*-35.000000 84300000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[sst_width] 272
+[signals_width] 487
+[sst_expanded] 1
+[sst_vpaned_height] 190
+@28
+top.clk
+top.reset
+top.spi_clk
+top.spi_cipo
+top.spi_copi
+@200
+-
+@28
+top.spi_peripheral.mosi_cnt_is_zero
+top.spi_cs
+top.spi_peripheral.spi_reset
+@200
+-
+@24
+top.spi_peripheral.mosi_cnt[12:0]
+[pattern_trace] 1
+[pattern_trace] 0
