@@ -1,3 +1,9 @@
+# fixed with #511
+
+Dave Shah identified and fixed this nextpnr bug within minutes of reporting. https://github.com/YosysHQ/nextpnr/pull/511
+
+![fixed](pics/fixed.png)
+
 # spi reset issues
 
 Problem is that the async reset (from spi chip select) isn't always working to reset mosi_cnt[12:0] to 0.
